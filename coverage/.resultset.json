@@ -1,0 +1,42 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test_ruby/spec/account_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          3,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/Student/Desktop/Tristan_Makers/week10/bank_tech_test_ruby/lib/account.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1596618618
+  }
+}
