@@ -2,8 +2,10 @@ class Account
 
     attr_reader :balance, :account_history
 
+    STARTING_BALANCE = 0
+
     def initialize()
-        @balance = 0
+        @balance = STARTING_BALANCE
         @account_history = []
     end
 

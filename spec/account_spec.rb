@@ -5,7 +5,7 @@ describe Account do
     subject { Account.new() }
 
     it 'initiates with a balance at 0' do 
-        expect(subject.balance).to eq(0)
+        expect(subject.balance).to eq(Account::STARTING_BALANCE)
     end
 
     it 'initiates with an empty array for account history' do 
