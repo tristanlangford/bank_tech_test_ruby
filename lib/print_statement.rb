@@ -7,6 +7,11 @@ class PrintStatement
         @account_history = order_activities(account_history)
     end
 
+    def print
+        complete_statement
+        puts(@statement.join("\n"))
+    end
+
     def format_deposit(account_activity)
         "#{account_activity.activity_date} || £#{format_currency(account_activity.value)} || || £#{format_currency(account_activity.balance)}"
     end

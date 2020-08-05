@@ -34,4 +34,9 @@ describe PrintStatement do
         expect(subject.statement).to eq(statement)
     end
 
+    it 'prints statement to output' do 
+        statement = "date || credit || debit || balance\n22/10/2020 || || £2.00 || £8.00\n06/09/2020 || £10.00 || || £10.00\n01/02/2019 || £24.00 || || £32.00\n"
+        expect{ subject.print }.to output(statement).to_stdout
+    end
+
 end
