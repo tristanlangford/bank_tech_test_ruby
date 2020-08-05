@@ -10,6 +10,10 @@ class PrintStatement
         "#{account_activity.activity_date} || £#{format_currency(account_activity.value)} || || £#{format_currency(account_activity.balance)}"
     end
 
+    def format_withdrawal(account_activity)
+        "#{account_activity.activity_date} || || £#{format_currency(-account_activity.value)} || £#{format_currency(account_activity.balance)}"
+    end
+
     private
 
     def format_currency(value)

@@ -16,4 +16,8 @@ describe PrintStatement do
         expect(subject.format_deposit(interaction1)).to eq("06/09/2020 || £10.00 || || £10.00")
     end
 
+    it 'formats a withdrawal output' do 
+        expect(subject.format_withdrawal(interaction2)).to eq("22/10/2020 || || £2.00 || £8.00")
+    end
+
 end
