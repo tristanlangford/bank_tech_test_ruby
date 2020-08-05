@@ -3,8 +3,10 @@ require 'account'
 describe Account do 
 
     let(:account_activity) { double("account_activity", new: nil) }
+    let(:print_statement_instance) { double("print_statement_instance", print: nil) }
+    let(:print_statement) { double("print_statement", new: print_statement_instance) }
 
-    subject { Account.new(account_activity) }
+    subject { Account.new(account_activity, print_statement) }
 
     it 'initiates with a balance at 0' do 
         expect(subject.balance).to eq(Account::STARTING_BALANCE)
@@ -33,5 +35,10 @@ describe Account do
         subject.withdraw(10)
         expect(subject.account_history.length).to eq(1)
     end
+
+    it 'calls print statement' do 
+        expect(print_statement_instance).to receive(:print) 
+        subject.print_statement
+    end 
 
 end
