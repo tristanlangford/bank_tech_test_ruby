@@ -14,12 +14,12 @@ class Account
 
     def deposit(value)
         @balance += value
-        @account_history.push([@balance, value])
+        @account_history.push(@account_activity_class.new(@balance, value))
     end
 
     def withdraw(value)
         @balance -= value
-        @account_history.push([@balance, value])
+        @account_history.push(@account_activity_class.new(@balance, -value))
     end
 
 end
