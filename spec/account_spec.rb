@@ -2,7 +2,9 @@ require 'account'
 
 describe Account do 
 
-    subject { Account.new() }
+    let(:account_activity) { double("account_activity", new: nil) }
+
+    subject { Account.new(account_activity) }
 
     it 'initiates with a balance at 0' do 
         expect(subject.balance).to eq(Account::STARTING_BALANCE)
