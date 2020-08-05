@@ -20,4 +20,17 @@ describe PrintStatement do
         expect(subject.format_withdrawal(interaction2)).to eq("22/10/2020 || || £2.00 || £8.00")
     end
 
+    it 'orders the account activities by date' do 
+        expect(subject.account_history).to eq([interaction2, interaction1, interaction3])
+    end
+
+    xit 'calls the correct formatting function based on value' do 
+        statement = ["date || credit || debit || balance", 
+            "22/10/2020 || || £2.00 || £8.00", 
+            "06/09/2020 || £10.00 || || £10.00", 
+            "06/09/2020 || £24.00 || || £32.00"
+        ]   
+        expect(subject.complete_statement).to eq(statement)
+    end
+
 end
