@@ -1,9 +1,10 @@
 class AccountActivity
 
-    attr_reader :balance
+    attr_reader :balance, :value
 
-    def initialize(balance)
+    def initialize(balance, value)
         @balance = balance
+        @value = value
     end
 
 end
