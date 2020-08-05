@@ -27,4 +27,9 @@ describe Account do
         expect(subject.account_history.length).to eq(1)
     end
 
+    it 'creates a new AccountActivity on withdraw' do 
+        subject.withdraw(10)
+        expect(subject.account_history.length).to eq(1)
+    end
+
 end

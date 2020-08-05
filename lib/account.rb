@@ -14,6 +14,7 @@ class Account
 
     def withdraw(value)
         @balance -= value
+        @account_history.push([@balance, value])
     end
 
 end
