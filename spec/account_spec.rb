@@ -22,4 +22,9 @@ describe Account do
         expect(subject.balance).to eq(-10)
     end
 
+    it 'creates a new AccountActivity on deposit' do 
+        subject.deposit(10)
+        expect(subject.account_history.length).to eq(1)
+    end
+
 end
