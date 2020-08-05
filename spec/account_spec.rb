@@ -17,4 +17,9 @@ describe Account do
         expect(subject.balance).to eq(10)
     end
 
+    it 'withdraw subtracts from balance' do 
+        subject.withdraw(10)
+        expect(subject.balance).to eq(-10)
+    end
+
 end
