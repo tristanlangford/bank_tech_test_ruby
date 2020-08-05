@@ -7,6 +7,8 @@ class Account
         @account_history = []
     end
 
-
+    def deposit(value)
+        @balance += value
+    end
 
 end

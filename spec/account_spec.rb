@@ -12,4 +12,9 @@ describe Account do
         expect(subject.account_history).to eq([])
     end
 
+    it 'deposit adds to balance' do 
+        subject.deposit(10)
+        expect(subject.balance).to eq(10)
+    end
+
 end
