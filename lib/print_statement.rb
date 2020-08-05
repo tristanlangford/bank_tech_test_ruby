@@ -15,6 +15,10 @@ class PrintStatement
         "#{account_activity.activity_date} || || £#{format_currency(-account_activity.value)} || £#{format_currency(account_activity.balance)}"
     end
 
+    def complete_statement
+        @account_history.each { |act| act.value.positive? ? @statement.push(format_deposit(act)) : @statement.push(format_withdrawal(act))}
+    end
+
     private
 
     def order_activities(account_history)
